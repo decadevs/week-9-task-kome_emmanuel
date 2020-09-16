@@ -1,0 +1,4 @@
+#Wed Sep 16 11:01:30 WAT 2020
+base.0=/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

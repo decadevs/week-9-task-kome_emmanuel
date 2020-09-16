@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ui.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        Tollbar-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_gravity="top"
+            app:title="Pokemon List"
+            />
+
+
+        <!--        Recycler view for Pokemon list adapter-->
+        <ImageView
+            android:id="@+id/noInternetIv"
+            android:layout_width="730dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            app:srcCompat="@drawable/sad_pokemon1"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pokemon_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <!--Hidden Refresh button-->
+    <Button
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:visibility="invisible"
+        android:background="@android:color/black"
+        android:text="@string/refresh_button"
+        android:layout_gravity="bottom|center"
+        android:textColor="@android:color/white" />
+
+    <!--    Progress bar for poor internet connection-->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:backgroundTintMode="screen"
+        android:progress="75"
+        android:indeterminateDrawable="@drawable/circle"
+        android:max="100"
+        />
+
+    <!--Poor internet connection message-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible"
+        android:text="Connecting, please be patient..."
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+</FrameLayout>

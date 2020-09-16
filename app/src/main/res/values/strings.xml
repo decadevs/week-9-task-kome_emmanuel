@@ -1,9 +1,8 @@
 <resources>
-    <string name="app_name">MapTrack</string>
-    <string name="title_activity_maps">Map</string>
-    <string name="normal_map">Normal Map</string>
-    <string name="hybrid_map">Hybrid Map</string>
-    <string name="satellite_map">Satellite Map</string>
-    <string name="terrain_map">Terrain Map</string>
-    <string name="dropped_pin">Dropped Pin</string>
+    <string name="app_name">Week 8 LiveData</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="abilities">Abilities</string>
+    <string name="moves">Moves</string>
+    <string name="stats">Stats</string>
+    <string name="refresh_button">Refresh</string>
 </resources>

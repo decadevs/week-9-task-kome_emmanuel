@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "MapTrack"
+rootProject.name = "Week 8 LiveData"
