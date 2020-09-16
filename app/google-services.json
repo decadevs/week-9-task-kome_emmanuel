@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "652716343152",
+    "firebase_url": "https://mao-tracker-e9837.firebaseio.com",
+    "project_id": "mao-tracker-e9837",
+    "storage_bucket": "mao-tracker-e9837.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652716343152:android:b1435b7b0bcd0db10459b5",
+        "android_client_info": {
+          "package_name": "com.decagon.maptrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652716343152-q05nf6lou4cjs6vseqhf87gjrgttft9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBruwTLgitzdAz1BiSnXCkElUTij6eOu0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652716343152-q05nf6lou4cjs6vseqhf87gjrgttft9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
