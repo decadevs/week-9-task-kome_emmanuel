@@ -4,7 +4,6 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -70,26 +69,59 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         override fun onDataChange(dataSnapshot: DataSnapshot) {
             if (dataSnapshot.exists()) {
                 map.clear()
-                val locationLog =
+
+                //Get partner's location from firebase
+                val partnerLocationLog =
                     dataSnapshot.child("komesLocation").getValue(MyLocationLog::class.java)
 
-                var partnerLatitude = locationLog?.Latitude
-                var partnerLongitude = locationLog?.Longitude
+                var partnerLatitude = partnerLocationLog?.Latitude
+                var partnerLongitude = partnerLocationLog?.Longitude
 
 
                 if (partnerLatitude != null && partnerLongitude != null) {
                     val partnerLocation = LatLng(partnerLatitude, partnerLongitude)
 
-                    val markerOptions = MarkerOptions().position(partnerLocation).title(PARTNER_TITLE)
-
-                    ///Custom Marker
-                    val bitmap: Bitmap? = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(resources,R.drawable.kome), 50, 50, true)
-                    map.addMarker(markerOptions).setIcon(BitmapDescriptorFactory.fromBitmap(bitmap))
+                    val markerOptions =
+                        MarkerOptions().position(partnerLocation).title(PARTNER_TITLE)
                     val zoomLevel = 15f
 
+                    ///Custom Marker
+                    val bitmap: Bitmap? = Bitmap.createScaledBitmap(
+                        BitmapFactory.decodeResource(
+                            resources,
+                            R.drawable.kome
+                        ), 150, 150, true
+                    )
+                    map.addMarker(markerOptions).setIcon(BitmapDescriptorFactory.fromBitmap(bitmap))
                     map.setMinZoomPreference(zoomLevel)
-                    map.addMarker(markerOptions)
                     map.animateCamera(CameraUpdateFactory.newLatLng(partnerLocation))
+
+                }
+
+                //Fetch my location my firebase
+                val myLocationLog =
+                    dataSnapshot.child("dikasLocation").getValue(MyLocationLog::class.java)
+
+
+                if (myLocationLog != null) {
+                    var myLatitude = myLocationLog.Latitude
+                    var myLongitude = myLocationLog.Longitude
+                    val zoomLevel = 15f
+
+
+                    val latLng = LatLng(myLatitude!!, myLongitude!!)
+                    val markerOptions = MarkerOptions().position(latLng).title(MY_TITLE)
+                    ///Custom Marker
+                    val bitmap: Bitmap? = Bitmap.createScaledBitmap(
+                        BitmapFactory.decodeResource(
+                            resources,
+                            R.drawable.dika
+                        ), 150, 150, true
+                    )
+                    map.addMarker(markerOptions).setIcon(BitmapDescriptorFactory.fromBitmap(bitmap))
+                    map.setMinZoomPreference(zoomLevel)
+
+                    //           map.animateCamera(CameraUpdateFactory.newLatLng(latLng))
 
                 }
             }
@@ -224,18 +256,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 //                            Toast.makeText(applicationContext, "Locations written into the database", Toast.LENGTH_LONG).show()
                         }
 
-                    if (location != null) {
-                        val latLng = LatLng(location.latitude, location.longitude)
-                        val markerOptions = MarkerOptions().position(latLng).title(MY_TITLE)
-                        ///Custom Marker
-                        val bitmap: Bitmap? = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(resources,R.drawable.dika), 50, 50, true)
-                        map.addMarker(markerOptions).setIcon(BitmapDescriptorFactory.fromBitmap(bitmap))
-                        val zoomLevel = 15f
 
-                        map.setMinZoomPreference(zoomLevel)
-                        map.addMarker(markerOptions)
-//                        map.animateCamera(CameraUpdateFactory.newLatLng(latLng))
-                    }
                 }
             }
         }
