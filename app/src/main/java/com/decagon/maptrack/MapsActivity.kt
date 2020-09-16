@@ -90,7 +90,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                         BitmapFactory.decodeResource(
                             resources,
                             R.drawable.kome
-                        ), 150, 150, true
+                        ), 100, 100, true
                     )
                     map.addMarker(markerOptions).setIcon(BitmapDescriptorFactory.fromBitmap(bitmap))
                     map.setMinZoomPreference(zoomLevel)
@@ -116,7 +116,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                         BitmapFactory.decodeResource(
                             resources,
                             R.drawable.dika
-                        ), 150, 150, true
+                        ), 100, 100, true
                     )
                     map.addMarker(markerOptions).setIcon(BitmapDescriptorFactory.fromBitmap(bitmap))
                     map.setMinZoomPreference(zoomLevel)
@@ -234,8 +234,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         locationRequest = LocationRequest()
 
 
-        val MIN_TIME = 10000L
-        val TIME_INTERVAL = 20000L
+        val MIN_TIME = 1000L
+        val TIME_INTERVAL = 1000L
 
 
         //Set intervals
@@ -248,13 +248,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 if (locationResult.locations.isNotEmpty()) {
                     val location = locationResult.lastLocation
 
-                    dbReference = Firebase.database.reference
-
                     val locationLogging = MyLocationLog(location.latitude, location.longitude)
+
+                    //Write location into firebase
+                    dbReference = Firebase.database.reference
                     dbReference.child("dikasLocation").setValue(locationLogging)
-                        .addOnSuccessListener {
-//                            Toast.makeText(applicationContext, "Locations written into the database", Toast.LENGTH_LONG).show()
-                        }
+//                        .addOnSuccessListener {
+//                            Toast.makeText(
+//                                applicationContext,
+//                                "Locations written into the database",
+//                                Toast.LENGTH_LONG
+//                            ).show()
+//                        }
 
 
                 }
