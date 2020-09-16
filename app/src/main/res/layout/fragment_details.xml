@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_container"
+    tools:context=".ui.main.DetailsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerBackground"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/black"
+        android:alpha="0.6">
+
+        <ImageView
+            android:id="@+id/headerBackgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/pokemonImageBlob"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/border"
+        app:layout_constraintBottom_toBottomOf="@+id/headerBackground"
+        app:layout_constraintEnd_toEndOf="@+id/headerBackground"
+        app:layout_constraintStart_toStartOf="@+id/headerBackground"
+        app:layout_constraintTop_toTopOf="@+id/headerBackground" />
+
+    <ImageView
+        android:id="@+id/pokemonImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonImageBlob"
+        app:layout_constraintEnd_toEndOf="@+id/pokemonImageBlob"
+        app:layout_constraintStart_toStartOf="@+id/pokemonImageBlob"
+        app:layout_constraintTop_toTopOf="@+id/pokemonImageBlob" />
+
+    <TextView
+        android:id="@+id/pokemonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="TextView"
+        android:textSize="35sp"
+        android:fontFamily="@font/pokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImageBlob" />
+
+    <TextView
+        android:id="@+id/pokemonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="TextView"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pokemonName" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonName">
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <!--    start pokemon height-->
+            <TextView
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:text="@string/height" />
+
+            <TextView
+                android:id="@+id/pokemonHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="@string/height" />
+
+            <!--    End pokemon height-->
+
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="28dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toEndOf="@+id/height"
+            tools:layout_editor_absoluteY="504dp" />
+
+<!--  Start Weight-->
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/weight" />
+
+            <TextView
+                android:id="@+id/pokemonWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
+            <!--    End pokemon weight-->
+        </LinearLayout>
+
+
+
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:background="?android:attr/listDivider" />
+
+        <!--    start pokemon abilities-->
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/PokemonOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="TextView" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pokemonMoves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/pokemon_btn_style"
+        android:text="@string/moves"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/pokemonAbilities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pokemon_btn_style"
+        android:text="@string/ability"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonMoves"
+        app:layout_constraintEnd_toStartOf="@+id/pokemonStats"
+        app:layout_constraintStart_toEndOf="@+id/pokemonMoves"
+        app:layout_constraintTop_toTopOf="@+id/pokemonMoves" />
+
+    <Button
+        android:id="@+id/pokemonStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/pokemon_btn_style"
+        android:text="@string/stats"
+        app:layout_constraintBottom_toBottomOf="@+id/pokemonAbilities"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pokemonAbilities" />
+
+<!--LinearLayout holds the sprites and text-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonMoves">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sprites"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="true"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/imageHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+<!--Start Sprites-->
+            <ImageView
+                android:id="@+id/spriteHolder_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:backgroundTint="@android:color/black"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/spriteHolder_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:backgroundTint="@android:color/black"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/spriteHolder_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:backgroundTint="@android:color/black"
+                tools:src="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/spriteHolder_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+
+                android:backgroundTint="@android:color/black"
+                tools:src="@tools:sample/avatars" />
+        </LinearLayout>
+<!--    End Sprites View-->
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "applicationId": "com.decagon.week8livedata",
+  "applicationId": "com.example.pokemon",
   "variantType": "BASE_APK",
   "elements": [
     {
@@ -19,9 +19,9 @@
       },
       "path": "resources-debug.ap_",
       "properties": {
-        "packageId": "com.decagon.week8livedata",
+        "packageId": "com.example.pokemon",
         "split": "",
-        "minSdkVersion": "19"
+        "minSdkVersion": "24"
       }
     }
   ]

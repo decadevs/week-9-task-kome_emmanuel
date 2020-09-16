@@ -1,8 +1,21 @@
 <resources>
-    <string name="app_name">Week 8 LiveData</string>
+    <string name="app_name">Pokemon</string>
+    <string name="pokemon_name">Ditto</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="abilities">Abilities</string>
+    <string name="back_btn_logo">Back Button</string>
+
+    <string name="scroll_name">ScrollView</string>
+    <string name="no_image">No Image</string>
+
+    <string name="height">Height:</string>
+    <string name="weight">Weight:</string>
+    <string name="ability">Abilities</string>
     <string name="moves">Moves</string>
+    <string name="order">Order:</string>
+    <string name="sprites">Sprites</string>
     <string name="stats">Stats</string>
-    <string name="refresh_button">Refresh</string>
+
+    <string name="error_message">Oops Network error, please try again later</string>
+
 </resources>

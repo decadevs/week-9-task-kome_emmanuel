@@ -1,78 +1,74 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.decagon.week8livedata"
+3    package="com.example.pokemon"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="19"
-8-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml
+8        android:minSdkVersion="24"
+8-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml
+9-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:5:5-67
-11-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:5:22-64
+11-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:5:5-66
+11-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:6:5-79
-12-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:6:22-76
+12-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:6:5-78
+12-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:6:22-76
 13
 14    <application
-14-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:8:5-28:19
+14-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:8:5-22:19
 15        android:allowBackup="true"
-15-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:9:9-35
+15-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.3.1] /Users/mac/.gradle/caches/transforms-2/files-2.1/00244e2ecd82b8e8696f962deb33b25d/core-1.3.1/AndroidManifest.xml:24:18-86
+16-->[androidx.core:core:1.3.1] /Users/catalina/.gradle/caches/transforms-2/files-2.1/21d47dff16ccbe3d5a08083de58452c6/core-1.3.1/AndroidManifest.xml:24:18-86
 17        android:debuggable="true"
-18        android:icon="@mipmap/ic_launcher"
-18-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:10:9-43
-19        android:label="@string/app_name"
-19-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:11:9-41
-20        android:roundIcon="@mipmap/ic_launcher_round"
-20-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:12:9-54
-21        android:supportsRtl="true"
-21-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:13:9-35
-22        android:testOnly="true"
-23        android:theme="@style/AppTheme" >
-23-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:14:9-40
-24        <activity android:name="com.decagon.week8livedata.ui.SplashScreen" >
-24-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:15:9-21:20
-24-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:15:19-50
-25            <intent-filter>
-25-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:16:13-20:29
-26                <action android:name="android.intent.action.MAIN" />
-26-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:17:17-69
-26-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:17:25-66
-27
-28                <category android:name="android.intent.category.LAUNCHER" />
-28-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:19:17-77
-28-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:19:27-74
-29            </intent-filter>
-30        </activity>
-31        <activity
-31-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:22:9-26:15
-32            android:name="com.decagon.week8livedata.ui.SinglePokemonActivity"
-32-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:22:19-59
-33            android:label="Pokemon Profile"
-33-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:25:13-44
-34            android:parentActivityName="com.decagon.week8livedata.ui.MainActivity"
-34-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:23:13-58
-35            android:theme="@style/PokemonTheme" />
-35-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:24:13-48
-36        <activity android:name="com.decagon.week8livedata.ui.MainActivity" />
-36-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:27:9-62
-36-->/Users/mac/AndroidStudioProjects/Decagon/Week8LiveData/app/src/main/AndroidManifest.xml:27:19-50
-37
-38        <provider
-38-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/2361ea377168cc8246990125988fc654/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
-39            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-39-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/2361ea377168cc8246990125988fc654/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
-40            android:authorities="com.decagon.week8livedata.lifecycle-process"
-40-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/2361ea377168cc8246990125988fc654/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
-41            android:exported="false"
-41-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/2361ea377168cc8246990125988fc654/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
-42            android:multiprocess="true" />
-42-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/2361ea377168cc8246990125988fc654/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
-43    </application>
-44
-45</manifest>
+18        android:extractNativeLibs="false"
+19        android:icon="@mipmap/ic_launcher"
+19-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:10:9-43
+20        android:label="@string/app_name"
+20-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:11:9-41
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:12:9-54
+22        android:supportsRtl="true"
+22-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:13:9-35
+23        android:testOnly="true"
+24        android:theme="@style/AppTheme" >
+24-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:14:9-40
+25        <activity android:name="com.example.pokemon.MainActivity" >
+25-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:15:9-21:20
+25-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:15:19-47
+26            <intent-filter>
+26-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:16:13-20:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:17:17-69
+27-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:17:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:19:17-77
+29-->/Users/catalina/AndroidStudioProjects/Pokemon copy/app/src/main/AndroidManifest.xml:19:27-74
+30            </intent-filter>
+31        </activity>
+32
+33        <provider
+33-->[com.squareup.picasso:picasso:2.71828] /Users/catalina/.gradle/caches/transforms-2/files-2.1/8f6fff7402ef87dd908defdfddb1e184/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+34            android:name="com.squareup.picasso.PicassoProvider"
+34-->[com.squareup.picasso:picasso:2.71828] /Users/catalina/.gradle/caches/transforms-2/files-2.1/8f6fff7402ef87dd908defdfddb1e184/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+35            android:authorities="com.example.pokemon.com.squareup.picasso"
+35-->[com.squareup.picasso:picasso:2.71828] /Users/catalina/.gradle/caches/transforms-2/files-2.1/8f6fff7402ef87dd908defdfddb1e184/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+36            android:exported="false" />
+36-->[com.squareup.picasso:picasso:2.71828] /Users/catalina/.gradle/caches/transforms-2/files-2.1/8f6fff7402ef87dd908defdfddb1e184/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+37        <provider
+37-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/catalina/.gradle/caches/transforms-2/files-2.1/77fa7d6ec2cec3035cff0f4afc942997/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+38            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+38-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/catalina/.gradle/caches/transforms-2/files-2.1/77fa7d6ec2cec3035cff0f4afc942997/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+39            android:authorities="com.example.pokemon.lifecycle-process"
+39-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/catalina/.gradle/caches/transforms-2/files-2.1/77fa7d6ec2cec3035cff0f4afc942997/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+40            android:exported="false"
+40-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/catalina/.gradle/caches/transforms-2/files-2.1/77fa7d6ec2cec3035cff0f4afc942997/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+41            android:multiprocess="true" />
+41-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/catalina/.gradle/caches/transforms-2/files-2.1/77fa7d6ec2cec3035cff0f4afc942997/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+42    </application>
+43
+44</manifest>

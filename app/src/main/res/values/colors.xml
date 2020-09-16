@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#F41E7B</color>
-    <color name="yellow">#FFB300</color>
-    <color name="blue">#762BCC</color>
+    <color name="colorPrimary">#D8D8D8</color>
+    <color name="colorPrimaryDark">#C2C2C2</color>
+    <color name="colorAccent">#F6F6F6</color>
+    <color name="fontColor">#616161</color>
+
+
+    <color name="orangeRecycler">#f2a654</color>
+    <color name="greenRecycler">#8bd574</color>
+    <color name="yellowRecycler">#f1cb56</color>
+    <color name="redRecycler">#e94871</color>
+    <color name="blueRecycler">#58acf6</color>
 </resources>
