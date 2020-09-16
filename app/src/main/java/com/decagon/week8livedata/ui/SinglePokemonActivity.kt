@@ -3,6 +3,7 @@ package com.decagon.week8livedata.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.ActionBar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
@@ -16,6 +17,15 @@ class SinglePokemonActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pokemon_details)
 
+        //Support back button in toolbar
+        var actionBar: ActionBar? = supportActionBar
+        if (actionBar != null) {
+            actionBar.title = "Go Back"
+            actionBar.setDisplayShowHomeEnabled(true)
+            actionBar.setDisplayHomeAsUpEnabled(true)
+        }
+
+        //Pokemon details implementation
         getSinglePokemonDetails()
     }
 

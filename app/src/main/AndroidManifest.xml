@@ -19,10 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.SinglePokemonActivity" />
-        <activity android:name=".ui.MainActivity">
-
-        </activity>
+        <activity android:name=".ui.SinglePokemonActivity"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/PokemonTheme"
+            android:label="Pokemon Profile"
+            />
+        <activity android:name=".ui.MainActivity"></activity>
     </application>
 
 </manifest>

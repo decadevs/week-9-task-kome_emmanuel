@@ -29,9 +29,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.decagon.week8livedata.ui.SinglePokemonActivity" />
-        <activity android:name="com.decagon.week8livedata.ui.MainActivity" >
-        </activity>
+        <activity
+            android:name="com.decagon.week8livedata.ui.SinglePokemonActivity"
+            android:label="Pokemon Profile"
+            android:parentActivityName="com.decagon.week8livedata.ui.MainActivity"
+            android:theme="@style/PokemonTheme" />
+        <activity android:name="com.decagon.week8livedata.ui.MainActivity" />
 
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
